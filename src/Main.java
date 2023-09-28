@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        ArrayList<String> punctuations = new ArrayList<>(Arrays.asList("!", ".", ",", "?", "\"", "/", "&", "(", ")", "@"));
+        ArrayList<String> punctuations = new ArrayList<>(Arrays.asList("!", ".", ",", "?", "\"", "/", "&", "(", ")", "@", ";", ":"));
 
         /**Test WordFileReader and WordProcessor 1*/
         WordFileReader wFR = new WordFileReader("Short-test.txt");
@@ -27,7 +27,7 @@ public class Main {
 
         //ArrayList for words in file
         //change "textOne.txt" to "textTwo.txt" when testing other text file
-        WordFileReader unprocessedFile = new WordFileReader("textOne.txt");
+        WordFileReader unprocessedFile = new WordFileReader("Nineteen+eighty-four.txt");
         WordProcessor processedWords = new WordProcessor(unprocessedFile.getWordList(), punctuations);
 
         WordCounter wC = new WordCounter(processedWords.getProcessedList(), processedCommonWords.getProcessedList());
